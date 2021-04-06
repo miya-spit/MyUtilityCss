@@ -101,7 +101,7 @@
 /* =====================
   文字表示関係
 ===================== */
-/* ==== 1行テキストのはみ出て分を「...」 ==== */
+/* ==== 1行テキストのはみ出てる分を「...」 ==== */
 .ellipsis{
     text-overflow : ellipsis;
     overflow      : hidden;
@@ -143,7 +143,7 @@
 /* ==== 単位などのCSSで付加（ jsで内容を変更するときなどに便利 ） ==== */
 /* 内包テキストの 前 に文字 <div data-textbefore="￥">1,000</div> => ￥1,000 */
 [data-textbefore]::before{content: attr(data-textbefore)" ";}
-/* 内包テキストの 後 に文字 <div data-textbefore="円">1,000</div> => 1,000円 */
+/* 内包テキストの 後 に文字 <div data-textafter="円">1,000</div> => 1,000円 */
 [data-textafter]::after{content: attr(data-textafter)" ";}
 
 /* =====================
@@ -151,7 +151,7 @@
 ===================== */
 /* ==== 角丸 ==== */
 .pill{border-radius    : 50rem;}  /* 長丸ボタン */
-.circle{border-radius  : 50%;}    /* 円 */
+.circle{border-radius  : 50%;}    /* 円 ※要サイズ指定 */
 
 /* ==== ポインター ==== */
 .cup{cursor : pointer;}
